@@ -7,7 +7,10 @@
 	<body>
 		<h1>Hello World!</h1>
 		<script>
-			window.open("index.html","_blank");
+			var cnt;
+			if(window.location.hash=="")cnt=1;
+			else cnt=parseInt(window.location.hash.substr(1));
+			if(cnt<200)window.open("index.html#"+(cnt+1),"_blank");
 		</script>
 	</body>
 </html>
